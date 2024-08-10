@@ -1,0 +1,34 @@
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin align($vertical: true, $horizontal: false, $position: relative) {
+  @if $position {
+    position: $position;
+  }
+  @if $vertical {
+    top: 50%;
+  }
+  @if $horizontal {
+    left: 50%;
+  }
+
+  @if $vertical and $horizontal {
+    transform: translateX(-50%) translateY(-50%);
+  } @else if $vertical {
+    transform: translateY(-50%);
+  } @else {
+    transform: translateX(-50%);
+  }
+}
+
+@mixin selection {
+  ::-moz-selection {
+    @content;
+  }
+  ::selection {
+    @content;
+  }
+}

@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+// Import vars
+@import "variables";
+
+// Import resets
+@import "./reset/index.scss";
+
+:root {
+  color-scheme: light dark;
+
+  // Main colors
+  --primary: light-dark(#8098ea, #0075a7);
+  --secondary: light-dark(#76c7c0, #00b998);
+  --tertiary: light-dark(#ffb6c1, #f07767);
+  --accent: light-dark(#ffd700, #ffff00);
+
+  // Side colors
+  --bg: light-dark(#fafafa, #152020);
+  --bg-reverse: light-dark(#152020, #fafafa);
+
+  // Status colors
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: $base-font;
+  font-style: $base-font--style;
+  font-size: $base-font--size;
+  font-optical-sizing: $base-font--optical-sizing;
+  font-weight: normal;
+  font-display: swap;
+}
